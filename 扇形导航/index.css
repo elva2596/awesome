@@ -1,0 +1,117 @@
+body{
+  margin:0
+}
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+#menu{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right:20px;
+  bottom:20px;
+}
+.menu_list{
+  width: 42px;
+  height: 42px;
+  margin:4px;
+  position: absolute;
+}
+/*
+    IE9以上
+    border-radius:
+      可以同时设置1-4个值:
+        1个值:表示四个圆角都用这个值
+*/
+.yanshi{
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  /*
+    一个值:
+      border-radius: 15px;
+  */
+
+  /*
+    两个值：表示左上和右下使用第一个值，右上和左下使用第二个值
+    border-radius: 15px 5px;
+  */
+
+  /*
+    三个值:左上使用第一个，右上和左下使用第二个，右下使用第三个
+    border-radius: 15px 5px 10px;
+  */
+
+  /*
+     四个值:从左上按顺时针取值
+     border-radius: 15px 10px 5px 25px;
+  */
+
+  /*
+     border-radius还可以设置第二组值:
+        第一组：表示水平半径
+        第二组：表示垂直半径
+    取值规则和使用一组时相同
+  */
+
+  /*
+    第二组取一个值
+    border-radius:15px 5px/3px;
+  */
+  /*
+    第二组取两个值
+    border-radius: 15px 5px 25px/3px 5px
+  */
+  /*
+    第二组取三个值
+    border-radius: 15px 5px 25px 20px/3px 5px 20px;
+  */
+
+  /*
+    第二组取四个值
+    border-radius: 15px 5px 25px 20px/3px 5px 10px 15px;
+  */
+
+  /*除了可以同时设置四个圆角，还可以单独设置圆角
+        border-top-left-radius
+        border-top-right-radius
+        border-bottom-left-radius
+        border-bottom-right-radius
+    这四个属性可以同时设置1-2个值，第一组表示水平半径，第二组表示垂直半径
+  */
+  /*border-top-left-radius: 15px;*/
+  /*border-top-left-radius: 15px 10px;*/
+}
+
+
+/*
+ transition属性:IE10以上
+   只对块级元素生效
+   css的transition允许css的属性值在一定的时间区间内平滑地过渡。
+   这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。
+
+
+*/
+.menu_list img{
+  width: 100%;
+  border-radius:50%;
+  position: absolute;
+  transition:.5s all ease;
+}
+.home{
+  width: 50px;
+  height: 50px;
+  background: url('./static/home.png') no-repeat;
+  position: absolute;
+  border-radius: 50%;
+  transition:  all .8s ease;
+  text-align: center;
+  line-height: 50px;
+  /*font-size: 14px;*/
+}
